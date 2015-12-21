@@ -15,6 +15,7 @@ class insertion {
                 while (j>0 && x<tab[j-1]) {
                     tab[j] = tab[j-1];
                     j = j-1;
+                    System.out.println(Arrays.toString(tab));
                     swap=true;
                 }
                 tab[j] = x;
