@@ -12,13 +12,13 @@ class insertion {
             for (int i=tab.length-1; i>0; i--) {
                 int x = tab[i];
                 int j = i;
-                while (j>0 && x<tab[j-1]) {
-                    tab[j] = tab[j-1];
+                while (j>0 && x<tab[j-1]) {     //if x (last element) is smaller than the element to it's left,
+                    tab[j] = tab[j-1];          // it moves it's neighbour to the right and keeps looking..
                     j = j-1;
                     System.out.println(Arrays.toString(tab));
                     swap=true;
                 }
-                tab[j] = x;
+                tab[j] = x;                     //once it finds a number that is smaller, it takes the spot of the last element it displaced.
             }
         } while (swap==true);
         
